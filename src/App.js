@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Form from './components/Form.js'
 
-function App() {
+export default function App() {
+  const [cep, setCep] = useState({
+    cep: "",
+    localidade: "",
+    uf: "",
+    bairro: "",
+    logradouro: ""
+  })
+  
+  useEffect(
+    () => {
+      fetch(`https://viacep.com.br/ws/${cep.cep}/json/`)
+        .then(response => response.json()
+        .then(data => setCep(data)))
+    }, [cep.cep])
+
+  function handleChange(event) {
+    const {name, value} = event.target
+
+    setCep(prevCep => {
+      return {
+        ...prevCep,
+        [name]: value
+      }
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form 
+        dados={cep}
+        handle={handleChange}
+      />
     </div>
   );
 }
-
-export default App;
