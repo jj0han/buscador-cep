@@ -8,4 +8,4 @@ Após ser preenchido o campo de CEP, o programa faz uma busca à API e retorna o
 `HTML` `CSS` `JavaScript` `ReactJS`
 
 ### Ferramentas utilizadas
-`Visual Studio Code` `Git`
+`Visual Studio Code` `Git` `API`
