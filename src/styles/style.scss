@@ -1,0 +1,87 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color:#ffffffeb;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+          -45deg, 
+          rgba(59,173,227,1) 0%, 
+          rgba(87,111,230,1) 25%, 
+          rgba(152,68,183,1) 51%, 
+          rgb(255, 53, 77) 100%
+    );
+    animation: animateBg 20s ease infinite;
+}
+  
+@keyframes animateBg {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 50% 100%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+.Main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    background-color: #f0f8ff4d;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+
+    &, fieldset, .input {
+        border-radius: 7px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        }
+
+    fieldset {
+        border: 1px solid rgba(255, 255, 255, 0.546);
+        margin-bottom: 10px;
+
+        .input {
+            color: black;
+            margin: 15px 20px;
+            padding: 5px;
+            width: 40%;
+            }
+            
+        .legend {
+            font-weight: 500;
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .Main {
+        margin: 10px;
+    }
+
+    .input {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+}

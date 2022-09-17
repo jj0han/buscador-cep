@@ -1,4 +1,4 @@
-export default function Form(props) {
+export default function Form({ dados, handle }) {
     return(
         <form className="Main">
             <h1>Preenchimento automático por CEP</h1>
@@ -8,36 +8,36 @@ export default function Form(props) {
                     className="input"
                     name="cep"
                     placeholder="CEP"
-                    value={props.dados.cep}
-                    onChange={props.handle}
+                    value={dados.cep}
+                    onChange={handle}
                 />
                 <input
                     className="input"
                     name="localidade"
                     placeholder="Localidade"
-                    value={props.dados.localidade}
-                    onChange={props.handle}
+                    value={dados.localidade}
+                    onChange={handle}
                 />
                 <input
                     className="input"
                     name="uf"
                     placeholder="UF"
-                    value={props.dados.uf}
-                    onChange={props.handle}
+                    value={dados.uf}
+                    onChange={handle}
                 />
                 <input
                     className="input"
                     name="bairro"
                     placeholder="Bairro"
-                    value={props.dados.bairro}
-                    onChange={props.handle}
+                    value={dados.bairro}
+                    onChange={handle}
                 />
                 <input
                     className="input"
                     name="logradouro"
                     placeholder="Logradouro"
-                    value={props.dados.logradouro}
-                    onChange={props.handle}
+                    value={dados.logradouro}
+                    onChange={handle}
                 />
             </fieldset>
             <small>Desenvolvido por João Bomfim</small>

@@ -1,0 +1,87 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: rgba(255, 255, 255, 0.9215686275);
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, rgb(59, 173, 227) 0%, rgb(87, 111, 230) 25%, rgb(152, 68, 183) 51%, rgb(255, 53, 77) 100%);
+  -webkit-animation: animateBg 20s ease infinite;
+          animation: animateBg 20s ease infinite;
+}
+
+@-webkit-keyframes animateBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.Main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 500px;
+  background-color: rgba(240, 248, 255, 0.3019607843);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 20px;
+}
+.Main, .Main fieldset, .Main .input {
+  border-radius: 7px;
+}
+.Main h1 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.Main fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.546);
+  margin-bottom: 10px;
+}
+.Main fieldset .input {
+  color: black;
+  margin: 15px 20px;
+  padding: 5px;
+  width: 40%;
+}
+.Main fieldset .legend {
+  font-weight: 500;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .Main {
+    margin: 10px;
+  }
+  .input {
+    width: 100%;
+    margin: 20px 0;
+  }
+  fieldset {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

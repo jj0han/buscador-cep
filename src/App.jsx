@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
-import Form from './components/Form.js'
+import Form from './components/Form'
 
 export default function App() {
   const [cep, setCep] = useState({
@@ -14,9 +13,9 @@ export default function App() {
   useEffect(
     () => {
       fetch(`https://viacep.com.br/ws/${cep.cep}/json/`)
-        .then(response => response.json()
-        .then(data => setCep(data)))
-    }, [cep.cep])
+        .then(response => response.json())
+        .then(data => setCep(data))
+    }, [cep.cep.split("").length >= 8])
 
   function handleChange(event) {
     const {name, value} = event.target
